@@ -1,0 +1,51 @@
+{
+  "name": "@p12/carbyne",
+  "version": "0.1.1",
+  "license": "MIT",
+  "bin": {
+    "carbyne": "dist/src/cli/cli.js"
+  },
+  "scripts": {
+    "build": "rm -r dist && tsc --build . ",
+    "lint": "prettier -w . && eslint .",
+    "deploy": "npm run build && npm publish"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "find-up": "^2.1.0",
+    "fs-extra": "^10.0.1",
+    "inquirer": "^8.2.1",
+    "meow": "^9.0.0",
+    "path": "^0.12.7",
+    "semver": "^7.3.5",
+    "sort-package-json": "^1.55.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
+  },
+  "devDependencies": {
+    "@types/find-up": "^2.1.1",
+    "@types/fs-extra": "^9.0.13",
+    "@types/inquirer": "^8.2.0",
+    "@types/lodash": "^4.14.180",
+    "@types/semver": "^7.3.9",
+    "@typescript-eslint/eslint-plugin": "^5.16.0",
+    "@typescript-eslint/parser": "^5.16.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.0"
+  },
+  "files": [
+    "src/",
+    "templates/",
+    "test/",
+    "dist",
+    "*.d.ts",
+    "*.d.ts.map",
+    "*.js",
+    "*.js.map",
+    "LICENSE",
+    "README.md"
+  ]
+}
