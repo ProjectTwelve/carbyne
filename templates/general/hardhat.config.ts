@@ -21,6 +21,9 @@ task('accounts', 'Prints the list of accounts', async (taskArgs, hre) => {
     console.log(account.address);
   }
 });
+
+const accounts = process.env.accounts ? process.env.accounts.split(',') : [];
+
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
 
@@ -64,13 +67,13 @@ const config: HardhatUserConfig = {
     p12TestNet: {
       url: 'https://testnet.p12.games/',
       chainId: 44010,
-      accounts: [],
+      accounts: accounts,
       gas: 'auto',
       gasPrice: 'auto',
     },
     rinkeby: {
       url: process.env.RINKEBY_URL || '',
-      accounts: [],
+      accounts: accounts,
     },
   },
   gasReporter: {
