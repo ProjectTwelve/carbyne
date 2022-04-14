@@ -63,6 +63,11 @@ subtask('flat:get-flattened-sources', 'Returns all contracts and their dependenc
     tmp.splice(0, 0, 'flatten');
     const output = tmp.join('/');
 
+    const dir = tmp.slice(0, tmp.length - 1).join('/');
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+
     const dependencyGraph: DependencyGraph = await hre.run('compile:solidity:get-dependency-graph', {
       sourceNames: [sourceName],
     });
