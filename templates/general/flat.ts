@@ -54,6 +54,9 @@ subtask('flat:get-flattened-sources', 'Returns all contracts and their dependenc
 
   if (!fs.existsSync('flatten')) {
     fs.mkdirSync('flatten');
+  } else {
+    fs.rmdirSync('flatten', { recursive: true });
+    fs.mkdirSync('flatten');
   }
 
   for (const sourceName of sourceNames) {
