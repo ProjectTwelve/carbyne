@@ -11,7 +11,7 @@
     "test": "hardhat test",
     "test:analysis": "REPORT_GAS=true hardhat test",
     "coverage": "hardhat coverage",
-    "lint": "cspell \"**/*.sol\" \"**/*.ts\" && prettier -w . && eslint ."
+    "lint": "cspell \"**/*.sol\" \"**/*.ts\" && prettier -w . && eslint **/**.ts"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.3",
@@ -54,5 +54,6 @@
   "dependencies": {
     "@openzeppelin/contracts": "^4.4.1",
     "@openzeppelin/contracts-upgradeable": "^4.4.2"
-  }
+  },
+  "files": []
 }
