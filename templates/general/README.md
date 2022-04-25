@@ -105,7 +105,7 @@ $ npm hardhat run scripts/xxxx.ts
 
 `tests` is where you write test scripts to test your contracts thoroughly. It uses hardhat framework to run tests and there is a temporary chain for you to read and write arbitrarily. For more, you can refer to hardhat [docs](https://hardhat.org/getting-started/)
 
-`.husky` is a folder for git hook. By default, there is a pre-commit hook that runs `npm run lint` and `npm run test` before you make a git commit. 
+`.husky` is a folder for git hook. By default, there is a pre-commit hook that runs `npm run lint` and `npm run test` before you make a git commit.
 
 `flat.ts` is a custom file to run smart flatten as hardhat's origin command `flatten` doesn't work well.
 
