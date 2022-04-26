@@ -1,6 +1,6 @@
 {
   "name": "@p12/carbyne",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "bin": {
     "carbyne": "dist/src/cli/cli.js"
