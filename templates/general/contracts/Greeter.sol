@@ -17,7 +17,7 @@ contract Greeter is IGreeter {
   }
 
   function setGreeting(string memory _greeting) public override {
-    console.log("Changing greeting from '%s' to '%s'", greeting, _greeting);
+    console.log('Changing greeting from \'%s\' to \'%s\'', greeting, _greeting);
     greeting = _greeting;
   }
 }
