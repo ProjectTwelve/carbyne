@@ -22,7 +22,7 @@
   ],
   "scripts": {
     "build": "tsc --build . ",
-    "lint": "prettier -w . && eslint .",
+    "lint": "prettier -w . && eslint src/**/**.ts test/**.ts",
     "deploy": "npm run build && npm publish"
   },
   "dependencies": {
